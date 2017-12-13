@@ -19,8 +19,8 @@ namespace Microsoft.Bot.Sample.QnABot
             //var  reply = "【質問】" + Environment.NewLine + answer.Questions + Environment.NewLine + "【回答】" + answer.Answer;
             //await context.PostAsync(reply);
             //await context.PostAsync(message);
-            Activity reply = ((Activity)context.Activity).CreateReply();
-            await context.PostAsync(reply);
+            //Activity reply = ((Activity)context.Activity).CreateReply();
+            //await context.PostAsync(reply);
         }
     }
 }
