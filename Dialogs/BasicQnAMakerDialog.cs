@@ -15,7 +15,7 @@ namespace Microsoft.Bot.Sample.QnABot
         }
         protected override async Task RespondFromQnAMakerResultAsync(IDialogContext context, IMessageActivity message, QnAMakerResults result)
         {
-            var answer = result.Answers.First();
+            //var answer = result.Answers.First();
             //var  reply = "【質問】" + Environment.NewLine + answer.Questions + Environment.NewLine + "【回答】" + answer.Answer;
             //await context.PostAsync(reply);
             await context.PostAsync(message);
