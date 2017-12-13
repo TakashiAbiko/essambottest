@@ -13,11 +13,5 @@ namespace Microsoft.Bot.Sample.QnABot
         public BasicQnAMakerDialog() : base(new QnAMakerService(new QnAMakerAttribute(ConfigurationManager.AppSettings["QnASubscriptionKey"], ConfigurationManager.AppSettings["QnAKnowledgebaseId"])))  // If you're running this bot locally, make sure you have these appSettings in youe web.config
         {
         }
-        protected override async Task RespondFromQnAMakerResultAsync(IDialogContext context, IMessageActivity message, QnAMakerResults result)
-        {
-             var answer = result.Answers.First();
-             var  reply = "【質問】" + Environment.NewLine + answer.Questions + Environment.NewLine + "【回答】" + answer.Answer;
-             await context.PostAsync(reply);
-        }
     }
 }
